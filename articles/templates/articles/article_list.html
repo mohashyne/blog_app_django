@@ -3,15 +3,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        li {
+            list-style-type: none;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
     <h1>Article List</h1>
-    <ul>
-        <li>article1</li>
-        <li>article2</li>
-        <li>article3</li>
-        <li>article4</li>
-        <li>article5</li>
-    </ul>
+        {% for article in articles %}
+        <ul class="article-list"></ul>
+            <li>
+                <h2><a href="{{ article.url }}">{{ article.title }}</a></h2>
+                <p>{{ article.body }}</p>
+                <p>{{ article.date }}</p>
+            </li>
+        </ul>
+        {% endfor %}
 </body>
 </html>
