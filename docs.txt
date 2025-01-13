@@ -1,0 +1,43 @@
+"python3 manage.py shell"
+This opens an interactive environment (like a chatbox for your code). Here, you can type Python commands to interact with your project.
+
+Importing the Article Model
+Models are like blueprints for the data in your project. For example, the Article model represents an article with fields like a title, body, and date.
+
+"from articles.models import from Article"
+This line imports the Article model from the articles app. so this will import our Article class
+
+
+"Article"
+<class 'articles.models.Article'>
+This is the Article model, which is a class that represents an article.
+
+
+"Article.objects.all()"
+<QuerySet []>
+
+
+"article = Article()"
+<articles.models.Article object at 0x7f9f9a2f7a90
+
+# to show the columns inn this table
+print(article.__dict__)
+{'_state': <django.db.models.base.ModelState object at 0x109a7f4d0>, 'id': None, 'title': 'Artificial Inteligence', 'slug': '', 'body': '', 'date': None}
+
+
+" artile.title = "Artificial Inteligence" "
+
+
+Article.objects.all()
+<QuerySet [<Article: Article object (1)>]>
+
+This is how you can interact with your project in the shell. You can create, read, update and delete
+>>> Article.objects.all()[0].title
+'Artificial Inteligence' 
+>>> 
+
+
+
+
+
+

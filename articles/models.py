@@ -6,6 +6,12 @@ class Article(models.Model):
     slug = models.SlugField()
     body = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
+    
+# This will display the title of the article in the admin panel instead of the default 'Article object'
+# This is a dunder method which is called when you try to print the object, it returns the title of the article and not the object, something like stringify the object.    
+
+def __str__(self):
+    return self.title
  
 
 # TODO: add thumbnail later and add author  
