@@ -1,0 +1,24 @@
+body {
+    background-color:rgb(45, 183, 107);
+    
+}
+
+body * {
+    font-family: Ubuntu;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    margin: 0;
+}
+
+a, a.hover, a:visited {
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+img {
+    width: 50%;
+    height: auto;
+    border-radius: 5px;    
+}
