@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 
@@ -13,10 +14,13 @@ class Article(models.Model):
 # This is a dunder method which is called when you try to print the object, it returns the title of the article and not the object, something like stringify the object.
 
     def __str__(self):
-        return self.title
+        return str(self.title)
 
     def snippet(self):
-        return self.body[:50] + '...'
+        return str(self.body)[:50] + '...'
+    
+    def get_absolute_url(self):
+        return reverse('article_detail', args=[self.slug])
 
 
 # TODO: add thumbnail later and add author
