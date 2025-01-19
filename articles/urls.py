@@ -2,6 +2,9 @@
 from django.urls import path
 from . import views
 
+# namespace the urls for the articles app to avoid conflicts with other apps
+app_name = 'articles'
+
 urlpatterns = [
     path('', views.article_list, name='article_list'),  # Homepage for articles
     path('about/', views.about, name='about'),          # About page for articles

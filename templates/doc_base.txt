@@ -11,6 +11,7 @@
 <body>
    <div class="wrapper">
        <header>
+        <!-- we can also  reference the name_app to the list too -->
         <h2><a href="{% url 'articles:article_list' %}"><img src="{% static 'logo.png' %}" alt=""></a></h2>
         <nav>
             <ul>

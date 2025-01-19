@@ -5,6 +5,7 @@ body {
 
 body * {
     font-family: Ubuntu;
+    list-style-type: none;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -21,4 +22,26 @@ img {
     width: 50%;
     height: auto;
     border-radius: 5px;    
+}
+
+h2 a img {
+    float: left;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+nav {
+    width: 86%;
+    background-color: #333;
+    color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: auto;
+
+}
+
+nav li {
+    display: inline;
+    padding: 10px;
 }

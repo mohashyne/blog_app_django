@@ -19,6 +19,9 @@ class Article(models.Model):
     def snippet(self):
         return str(self.body)[:50] + '...'
     
+    # This will return the absolute url of the article
+    # by calling this in our template, we can get the url of the article
+    # <!-- <h2><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h2> -->
     def get_absolute_url(self):
         return reverse('article_detail', args=[self.slug])
 
