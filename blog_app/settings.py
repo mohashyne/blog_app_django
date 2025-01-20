@@ -124,6 +124,9 @@ STATICFILES_DIRS = [
     # This is the path to the assets folder  , BASE_DIR is the root directory of the project
 ]
 
+MEDIA_URL = 'media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
