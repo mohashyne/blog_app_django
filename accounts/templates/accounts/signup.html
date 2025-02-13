@@ -3,8 +3,10 @@
 {% block content %}
     <div>
      <h2>SignUp</h2>
-     <form class="site-form" action="/accounts/signup" method="post">
-        <button type="submit" value="SignUp">SignUp</button>
+     <form class="site-form" action="/accounts/signup/" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" value="Signup">SignUp</button>
      </form>
     </div>
-{% endblock %}
+        {% endblock %}
