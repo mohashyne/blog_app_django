@@ -7,7 +7,8 @@ from django.conf.urls.static import static  # Import static to serve media files
 from django.conf import settings
 
 urlpatterns = [
-    path('admin/', admin.site.urls),                    # Admin site
+    path('admin/', admin.site.urls), 
+    path('accounts/', include('accounts.urls')),
     # Include articles app URLs
     path('articles/', include('articles.urls')),
     path('', views.home, name='home'),                  # Root URL (homepage)
