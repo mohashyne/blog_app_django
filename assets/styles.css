@@ -31,26 +31,25 @@ h2 a img {
 }
 
 
-header {
+/* header {
     display: flex;
     padding: 20px;
-}
+} */
 
 
 nav {
-    width: 86%;
+    width: 95%;
     background-color: #333;
     color: #f1f1f1;
     padding: 10px;
     border-radius: 5px;
     margin-left: auto;
     height: 3rem;
-    display: flex;
     justify-content: center;
 
 }
 
-nav li {
-    display: inline;
-    padding: 10px;
+nav ul {
+    display: flex;
+    justify-content: space-around;
 }

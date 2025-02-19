@@ -4,9 +4,10 @@
     <div>
         <h2>Login</h2>
         <!-- <form class="site-form" action="/accounts/login/" method="post"> -->
+            <h3>You are logged  out</h3>
         <form class="site-form" action="{% url 'accounts:login' %}" method="post">
             {% csrf_token %}
             {{ form.as_p }}
-            <input type="submit" value="Login"></input>
+            <input type="submit" value="Login">Login</input>
         </form> 
         {% endblock %}

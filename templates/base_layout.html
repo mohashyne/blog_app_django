@@ -16,6 +16,16 @@
             <ul>
                 <li><a href="{% url 'articles:article_list' %}">Home</a></li>
                 <li><a href="{% url 'about' %}">About</a></li>
+                <li>
+                <!-- <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
+                  {% csrf_token %}
+                    <button type="submit" value="Logout">Logout</button>
+                </form> -->
+                <form class="logout-link" method="post" action="{% url 'accounts:logout' %}">
+                    {% csrf_token %}
+                    <button type="submit">Log Out</button>
+                </form>
+                </li>
             </ul>
         </nav>
     </header>
