@@ -1,17 +1,182 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>About Us</h1>
-    <p> This is About Muhammad's blog:
-        <ul>
-            <li> We are a team of developers</li>
-            <li> We are passionate about coding</li>
-            <li> We are here to help you</li>
-        </ul>
-    </p>
-</body>
-</html>
+{% extends 'base_layout.html' %}
+
+{% block title %}About Us - Crystal Blue Tech Blog{% endblock %}
+
+{% block meta_description %}Learn about Crystal Blue Tech Blog, our mission, and the passionate team behind our technology insights and innovations.{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="text-center mb-12 fade-in">
+            <h1 class="text-4xl font-bold text-primary mb-6">About Crystal Blue Tech Blog</h1>
+            <p class="text-xl text-secondary max-w-3xl mx-auto">
+                Empowering the tech community through insightful articles, innovative solutions, and shared knowledge
+            </p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            <!-- Our Story -->
+            <div class="card slide-in">
+                <div class="card-header">
+                    <h2 class="card-title">Our Story</h2>
+                </div>
+                <div class="card-body">
+                    <p class="mb-4">
+                        Crystal Blue Tech Blog was born from a passion for technology and a desire to share knowledge
+                        with the global developer community. Inspired by the innovative spirit of
+                        <a href="https://www.crystalbluetech.com/" target="_blank" rel="noopener noreferrer" class="text-primary">Crystal Blue Tech</a>,
+                        we aim to bridge the gap between complex technical concepts and practical implementation.
+                    </p>
+                    <p>
+                        Our platform serves as a hub for developers, tech enthusiasts, and industry professionals
+                        to share insights, learn from each other, and stay updated with the latest trends in technology.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Our Mission -->
+            <div class="card slide-in" style="animation-delay: 0.2s;">
+                <div class="card-header">
+                    <h2 class="card-title">Our Mission</h2>
+                </div>
+                <div class="card-body">
+                    <p class="mb-4">
+                        To create a collaborative platform where technology professionals can:
+                    </p>
+                    <ul style="list-style: disc; margin-left: var(--space-5); line-height: 1.6; color: var(--medium-gray);">
+                        <li>Share practical insights and real-world experiences</li>
+                        <li>Learn from industry experts and peers</li>
+                        <li>Stay current with emerging technologies</li>
+                        <li>Build meaningful connections within the tech community</li>
+                        <li>Contribute to the advancement of technology education</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Values Section -->
+        <div class="card mb-12 fade-in">
+            <div class="card-header text-center">
+                <h2 class="card-title">Our Core Values</h2>
+                <p class="card-subtitle">The principles that guide everything we do</p>
+            </div>
+            <div class="card-body">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Innovation -->
+                    <div class="text-center p-4">
+                        <div class="mb-4">
+                            <svg width="48" height="48" fill="var(--primary-blue)" viewBox="0 0 16 16" style="margin: 0 auto;">
+                                <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
+                                <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-primary mb-2">Innovation</h3>
+                        <p class="text-secondary">Embracing cutting-edge technologies and creative solutions</p>
+                    </div>
+
+                    <!-- Quality -->
+                    <div class="text-center p-4">
+                        <div class="mb-4">
+                            <svg width="48" height="48" fill="var(--primary-blue)" viewBox="0 0 16 16" style="margin: 0 auto;">
+                                <path d="M9.669.864 8 0 6.331.864l-1.858.282-.842 1.68-1.337 1.32L2.6 6l-.306 1.854 1.337 1.32.842 1.68 1.858.282L8 12l1.669-.864 1.858-.282.842-1.68 1.337-1.32L13.4 6l.306-1.854-1.337-1.32-.842-1.68L9.669.864zm1.196 1.193.684 1.365 1.086 1.072L12.387 6l.248 1.506-1.086 1.072-.684 1.365-1.51.229L8 10.874l-1.355-.702-1.51-.229-.684-1.365-1.086-1.072L3.614 6l-.25-1.506 1.087-1.072.684-1.365 1.51-.229L8 1.126l1.356.702 1.509.229z"/>
+                                <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-primary mb-2">Quality</h3>
+                        <p class="text-secondary">Delivering well-researched, accurate, and valuable content</p>
+                    </div>
+
+                    <!-- Community -->
+                    <div class="text-center p-4">
+                        <div class="mb-4">
+                            <svg width="48" height="48" fill="var(--primary-blue)" viewBox="0 0 16 16" style="margin: 0 auto;">
+                                <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/>
+                                <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-primary mb-2">Community</h3>
+                        <p class="text-secondary">Fostering collaboration and knowledge sharing</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Team Section -->
+        <div class="card mb-12 fade-in">
+            <div class="card-header text-center">
+                <h2 class="card-title">Meet the Team</h2>
+                <p class="card-subtitle">Passionate developers and tech enthusiasts</p>
+            </div>
+            <div class="card-body">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Team Member 1 -->
+                    <div class="text-center">
+                        <div class="w-24 h-24 bg-primary rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-white text-2xl font-bold">M</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-primary mb-1">Muhammad</h3>
+                        <p class="text-secondary mb-2">Lead Developer & Founder</p>
+                        <p class="text-sm text-secondary">
+                            Passionate about creating innovative solutions and sharing knowledge with the developer community.
+                        </p>
+                    </div>
+
+                    <!-- Team Member 2 -->
+                    <div class="text-center">
+                        <div class="w-24 h-24 bg-secondary rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-white text-2xl font-bold">T</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-primary mb-1">Tech Team</h3>
+                        <p class="text-secondary mb-2">Development Team</p>
+                        <p class="text-sm text-secondary">
+                            A dedicated team of developers working together to build amazing experiences.
+                        </p>
+                    </div>
+
+                    <!-- Community -->
+                    <div class="text-center">
+                        <div class="w-24 h-24 bg-accent-blue rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-white text-2xl font-bold">C</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-primary mb-1">Community</h3>
+                        <p class="text-secondary mb-2">Contributors & Writers</p>
+                        <p class="text-sm text-secondary">
+                            Amazing community members who contribute articles and share their expertise.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="text-center fade-in">
+            <div class="card" style="max-width: 600px; margin: 0 auto;">
+                <div class="card-body text-center">
+                    <h2 class="text-2xl font-semibold text-primary mb-4">Join Our Community</h2>
+                    <p class="text-secondary mb-6">
+                        Ready to share your knowledge and learn from others? Join our growing community of tech enthusiasts.
+                    </p>
+                    <div class="flex justify-center gap-4">
+                        {% if not user.is_authenticated %}
+                            <a href="{% url 'accounts:signup' %}" class="btn btn-primary">
+                                Get Started
+                            </a>
+                            <a href="{% url 'accounts:login' %}" class="btn btn-secondary">
+                                Sign In
+                            </a>
+                        {% else %}
+                            <a href="{% url 'articles:create' %}" class="btn btn-primary">
+                                Write an Article
+                            </a>
+                            <a href="{% url 'articles:article_list' %}" class="btn btn-secondary">
+                                Browse Articles
+                            </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

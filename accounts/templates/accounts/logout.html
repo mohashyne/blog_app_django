@@ -1,13 +1,53 @@
 {% extends 'base_layout.html' %}
 
+{% block title %}Logged Out - Crystal Blue Tech Blog{% endblock %}
+
+{% block meta_description %}You have been successfully logged out of Crystal Blue Tech Blog.{% endblock %}
+
 {% block content %}
-    <div>
-        <h2>Login</h2>
-        <!-- <form class="site-form" action="/accounts/login/" method="post"> -->
-            <h3>You are logged  out</h3>
-        <form class="site-form" action="{% url 'accounts:login' %}" method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <input type="submit" value="Login">Login</input>
-        </form> 
-        {% endblock %}
+    <div class="container">
+        <div class="form-container fade-in text-center">
+            <!-- Success Icon -->
+            <div style="margin-bottom: var(--space-6);">
+                <svg width="64" height="64" fill="var(--success)" viewBox="0 0 16 16" style="margin: 0 auto;">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.061L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                </svg>
+            </div>
+
+            <h1 class="form-title">Successfully Logged Out</h1>
+            <p class="text-secondary mb-6">
+                You have been safely logged out of your account. Thank you for using Crystal Blue Tech Blog!
+            </p>
+
+            <!-- Action Buttons -->
+            <div class="form-actions" style="flex-direction: column; gap: var(--space-3);">
+                <a href="{% url 'accounts:login' %}" class="btn btn-primary btn-lg" style="width: 100%;">
+                    Sign In Again
+                </a>
+                <a href="{% url 'articles:article_list' %}" class="btn btn-secondary btn-lg" style="width: 100%;">
+                    Browse Articles
+                </a>
+            </div>
+
+            <!-- Additional Information -->
+            <div class="mt-8 p-4 bg-light rounded-lg">
+                <h3 class="text-lg font-medium text-primary mb-3">What's Next?</h3>
+                <div class="text-left text-secondary">
+                    <ul style="list-style: disc; margin-left: var(--space-5); line-height: 1.6;">
+                        <li>Browse our latest articles and insights</li>
+                        <li>Sign up for our newsletter to stay updated</li>
+                        <li>Follow us on social media for tech updates</li>
+                        <li>Join our community discussions</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Security Note -->
+            <div class="mt-6">
+                <p class="text-sm text-secondary">
+                    <strong>Security Tip:</strong> Always log out when using shared or public computers to protect your account.
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
